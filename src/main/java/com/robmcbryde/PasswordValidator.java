@@ -1,12 +1,5 @@
 package com.robmcbryde;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-/**
- * Created by robertmcbryde on 14/03/2017.
- */
 public class PasswordValidator {
 
     private final int minDigits;
@@ -25,13 +18,11 @@ public class PasswordValidator {
     }
 
     private boolean hasValidDigitCount(String password) {
-        int digitCount = 0;
-         char[] digits = password.toCharArray();
-        for (char c: digits ) {
-            if (Character.isDigit(c)) {
-                digitCount++;
-            }
-        }
-        return digitCount >= minDigits ? true : false;
+        int digitCount = (int) password.chars()
+            .mapToObj(i -> (char)i)
+            .filter(Character::isDigit)
+            .count();
+
+        return digitCount >= minDigits;
     }
 }

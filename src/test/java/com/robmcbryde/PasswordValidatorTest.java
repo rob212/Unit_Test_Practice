@@ -1,13 +1,9 @@
 package com.robmcbryde;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by robertmcbryde on 14/03/2017.
- */
 public class PasswordValidatorTest {
 
     PasswordValidator validator;
@@ -53,5 +49,25 @@ public class PasswordValidatorTest {
         boolean actual = validator.validate(password);
 
         assertFalse(actual);
+    }
+
+    @Test
+    public void givenPasswordValidatorHasMinDigitsSet_whenPasswordHasEqualNumberOfDigits_thenIsValid() throws Exception {
+        String password = "abcde346";
+        validator = new PasswordValidator(3, 3);
+
+        boolean actual = validator.validate(password);
+
+        assertTrue(actual);
+    }
+
+    @Test
+    public void givenPasswordValidatorHasMinDigitsSet_whenPasswordHasMoreThanNumberOfDigits_thenIsValid() throws Exception {
+        String password = "5abc6de346";
+        validator = new PasswordValidator(3, 1);
+
+        boolean actual = validator.validate(password);
+
+        assertTrue(actual);
     }
 }

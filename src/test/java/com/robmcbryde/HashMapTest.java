@@ -8,18 +8,15 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by robertmcbryde on 19/02/2017.
- */
 public class HashMapTest {
 
-    Map map;
+    Map<String, String> map;
     private String expectedKey;
     private String expectedValue;
 
     @Before
     public void setUp() throws Exception {
-       map = new HashMap();
+       map = new HashMap<>();
         expectedKey = "testKey";
         expectedValue = "testValue";
 
