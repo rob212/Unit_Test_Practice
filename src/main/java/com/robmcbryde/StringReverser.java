@@ -1,8 +1,5 @@
 package com.robmcbryde;
 
-/**
- * Created by robertmcbryde on 18/02/2017.
- */
 public class StringReverser {
 
     public static String reverse(String s ) {

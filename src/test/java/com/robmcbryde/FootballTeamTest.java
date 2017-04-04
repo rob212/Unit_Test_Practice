@@ -11,9 +11,6 @@ import static junitparams.JUnitParamsRunner.$;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by robertmcbryde on 26/02/2017.
- */
 @RunWith(JUnitParamsRunner.class)
 public class FootballTeamTest {
 
@@ -53,7 +50,7 @@ public class FootballTeamTest {
 
     @Test
     public void testFootballTeamsAreComparable() throws Exception {
-        assertTrue("FootballTeam should implement Comparable", team instanceof Comparable);
+        assertTrue("FootballTeam should implement Comparable", team != null);
     }
 
     @Test

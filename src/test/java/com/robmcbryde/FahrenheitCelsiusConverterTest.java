@@ -8,15 +8,12 @@ import org.junit.runner.RunWith;
 import static junitparams.JUnitParamsRunner.$;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by robertmcbryde on 19/02/2017.
- */
 @RunWith(JUnitParamsRunner.class)
 public class FahrenheitCelsiusConverterTest {
 
     private static final double DELTA = 1e-15;
 
-    private static final Object[] getTemps() {
+    private static Object[] getTemps() {
         return $(
             $(32, 0),
             $(98, 37),

@@ -4,18 +4,15 @@ import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import static junitparams.JUnitParamsRunner.$;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-/**
- * Created by robertmcbryde on 18/02/2017.
- */
+
 @RunWith(JUnitParamsRunner.class)
 public class StringReverserTest {
 
-    private static final Object[] getWords() {
+    private static Object[] getWords() {
         return $(
             $("cat", "tac"),
             $("mat", "tam"),

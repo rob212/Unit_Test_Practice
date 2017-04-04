@@ -1,8 +1,5 @@
 package com.robmcbryde;
 
-/**
- * Created by robertmcbryde on 26/02/2017.
- */
 public class FootballTeam implements Comparable<FootballTeam> {
 
     private int gamesWon;

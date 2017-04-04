@@ -1,8 +1,5 @@
 package com.robmcbryde;
 
-/**
- * Created by robertmcbryde on 19/02/2017.
- */
 public class FahrenheitCelsiusConverter {
 
     public static int toFahrenheit(int i) {
